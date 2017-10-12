@@ -75,7 +75,7 @@ def get_channel_info(channel_link, download_flag):
 	if (len(rows)):
 		print '--------------Found--------------'
 	else :
-		link3 = 'https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId='+channel_id+'&maxResults=5&key='+key
+		link3 = 'https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId='+channel_id+'&maxResults=100&key='+key
 		print link3
 		res = json.loads(urlopen(link3).read())
 		videos = res['items']
@@ -94,7 +94,7 @@ def get_playlist_info(playlist_link, download_flag):
 	if (len(rows)):
 		print '--------------Found--------------'
 	else :
-		link = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId='+playlist_id+'&key='+key
+		link = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=100&playlistId='+playlist_id+'&key='+key
 		res = json.loads(urlopen(link).read())
 		videos = res['items']
 		for video in videos:
