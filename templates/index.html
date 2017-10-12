@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Inmobly</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </head>
+  <body >
+    <h1 class="text-center" style="color: #5bc0de"> Welcome to Inmobly Challenge</h1>
+    <div class="container" >
+    	
+        <h3 >Add your playlist or channel url :</h3>
+        <input type="text" class="form-control" id="plink" placeholder="playlist or channel link">
+        <input type="checkbox" id='downlod_flag'>Download<br>
+        <br>
+        <a id="process" ><button class="btn btn-info">Extract Info</button></a>
+
+
+        <br><br>
+        <div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
+    	<div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+        <br>
+        <h2>The extracted details of the videos :</h2>    
+         <div id="firstConv">
+         <ul class='container'>
+        {% for var in var1 %}
+        <li><h5>{{ var }}</h5>
+        {% else %}
+        <li><em>There are no videos yet</em>
+        {% endfor %}
+        </ul>
+        </div>
+        <br>
+        <div id="varConv"></div>
+        <br><br>
+       
+  </div>
+  </body>
+</html>
