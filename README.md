@@ -1,8 +1,8 @@
-# inmobly-akef
+# Scrape-youtube
 # Installation
 1 - open your shell and type 'git clone https://github.com/a7mad3akef/inmobly-akef.git'
 
-2 - cd inmobly-akef
+2 - cd scrape-youtube
 
 3 - virtualenv . (you can install it by 'sudo pip install virtualenv' if it wasn't installed)
 
